@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-default-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mini-project-backend.onrender.com']
+ALLOWED_HOSTS = ['mini-project-backend-tsse.onrender.com/']
 
 
 # Application definition
