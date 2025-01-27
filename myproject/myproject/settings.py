@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-default-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mini-project-backend-tsse.onrender.com']
+ALLOWED_HOSTS = ['mini-project-backend-tsse.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -96,11 +96,14 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Ashu',
+        'USER': 'admin',
+        'PASSWORD': 'BloodTier01!',
+        'HOST': 'springdbs.chgksy22oaqi.eu-north-1.rds.amazonaws.com',
+        'PORT': '3306',
+    }
 }
 
 
