@@ -100,8 +100,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Ashu',
         'USER': 'admin',
-        'PASSWORD': 'BloodTier01!',
-        'HOST': 'springdbs.chgksy22oaqi.eu-north-1.rds.amazonaws.com',
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
         'PORT': '3306',
     }
 }
