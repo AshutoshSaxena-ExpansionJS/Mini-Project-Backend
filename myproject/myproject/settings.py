@@ -78,6 +78,7 @@ MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200", 
     "https://mini-project-backend-tsse.onrender.com",
+    "https://miniproject-lilac.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -90,11 +91,7 @@ CORS_ALLOW_METHODS = [
     "OPTIONS",
 ]
 
-CORS_ALLOW_HEADERS = [
-    "authorization",
-    "content-type",
-    "x-requested-with",
-]
+CORS_ALLOW_HEADERS = ["*"]
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=2),  # Increase to 2 hours
